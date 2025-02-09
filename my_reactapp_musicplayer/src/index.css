@@ -46,7 +46,7 @@ body.dark {
   transform: scale(1.2);
 }
 li:hover{
-  color: #cd3232;
+  color: #13db19;
 }
 .theme-toggle-btn {
   font-size: 1rem; /* Match the font size of navbar links */
