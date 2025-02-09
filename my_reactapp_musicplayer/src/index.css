@@ -1,0 +1,69 @@
+/* Global Light and Dark Themes */
+body.light {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+body.dark {
+  background-color: #1a1a1d;
+  color: #fff;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: inherit; /* Inherit background from body */
+  color: inherit; /* Inherit text color from body */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  cursor: pointer;
+}
+
+.brand-name {
+  color: #32cd32; /* Optional: Customize brand name color */
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.2);
+}
+li:hover{
+  color: #32cd32;
+}
+.theme-toggle-btn {
+  font-size: 1rem; /* Match the font size of navbar links */
+  font-weight: normal; /* Make sure the weight is consistent */
+  background-color: transparent; /* Remove default button background */
+  border: none; /* Remove button borders */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  color: inherit; /* Use the same color as the rest of the navbar */
+  padding: 0.5rem 1rem; /* Add some padding for better spacing */
+  border-radius: 5px; /* Optional: Add some rounding */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+  color: var(--hover-color); /* Add hover color (optional) */
+}
+h1{
+  cursor: pointer;
+}
