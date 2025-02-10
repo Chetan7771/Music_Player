@@ -6,13 +6,12 @@ const Login = ({ setIsLoggedIn }) => {
   const [error, setError] = useState("");
 
   const handleLogin = () => {
-    // Replace these with your actual credentials
     const validUsername = "admin";
     const validPassword = "password";
 
     if (username === validUsername && password === validPassword) {
-      setError(""); // Clear any existing errors
-      setIsLoggedIn(true); // Grant access to the homepage
+      setError("");
+      setIsLoggedIn(true);
     } else {
       setError("Invalid credentials. Please try again.");
     }
@@ -51,40 +50,50 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    background: "#f5f5f5",
+    backgroundColor: "#121212",
+    fontFamily: "'Circular Std', Roboto, sans-serif",
   },
   form: {
-    background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    backgroundColor: "#1e1e1e",
+    padding: "40px",
+    borderRadius: "12px",
+    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.5)",
     textAlign: "center",
+    width: "350px",
   },
   heading: {
-    marginBottom: "20px",
-    fontSize: "24px",
+    color: "#1db954",
+    fontSize: "28px",
     fontWeight: "bold",
+    marginBottom: "20px",
+  },
+  error: {
+    color: "#f44336",
+    fontSize: "14px",
+    marginBottom: "10px",
   },
   input: {
     width: "100%",
-    padding: "10px",
+    padding: "12px",
     margin: "10px 0",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
+    borderRadius: "8px",
+    border: "1px solid #1db954",
+    backgroundColor: "#121212",
+    color: "#fff",
     fontSize: "16px",
+    outline: "none",
   },
   button: {
-    padding: "10px 20px",
-    background: "#007bff",
+    width: "100%",
+    padding: "12px",
+    marginTop: "20px",
+    backgroundColor: "#1db954",
     color: "#fff",
     border: "none",
-    borderRadius: "5px",
+    borderRadius: "8px",
     fontSize: "16px",
     cursor: "pointer",
-  },
-  error: {
-    color: "red",
-    marginBottom: "10px",
+    transition: "background-color 0.3s ease",
   },
 };
 

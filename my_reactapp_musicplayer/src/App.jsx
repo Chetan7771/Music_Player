@@ -6,7 +6,7 @@ import Navbar from "./Components/Navbar";
 
 
 // Placeholder Components
-const Home = () => <h2>Welcome to the Home Page</h2>;
+const Home = () => <h2>Coming soon</h2>;
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
