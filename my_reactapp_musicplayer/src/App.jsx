@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from "react";
-import "./index.css";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./Components/Login";
+import Sidebar from "./Components/Sidebar";
+import Navbar from "./Components/Navbar";
 
-function Navbar() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Update body class whenever the theme changes
-  useEffect(() => {
-    document.body.className = isDarkMode ? "dark" : "light";
-  }, [isDarkMode]);
+// Placeholder Components
+const Home = () => <h2>Welcome to the Home Page</h2>;
 
-  // Toggle theme handler
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div>
-      <nav className="navbar">
-        <h1 className="brand-name">GrooveBox</h1>
-        <ul className="navbar-links">
-          <li>Home</li>
-          <li>Explore</li>
-          <li>Playlists</li>
-          <li>Profile</li>
-        </ul>
-        <button onClick={toggleTheme} className="theme-toggle-btn">
-          {isDarkMode ? "Light" : "Dark"}
-        </button>
-      </nav>
-    </div>
+    <Router>
+      {isLoggedIn && <Navbar />}
+      <div>
+        <Routes>
+          {!isLoggedIn ? (
+            <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+          ) : (
+            <>
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </>
+          )}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
-export default Navbar;
+export default App;

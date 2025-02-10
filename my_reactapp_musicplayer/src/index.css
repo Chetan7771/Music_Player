@@ -48,13 +48,11 @@ body.dark {
 .theme-toggle-btn:hover {
   transform: scale(1.2);
 }
-li:hover{
-<<<<<<< HEAD
+li:hover {
   color: #32cd32;
-=======
-  color: #13db19;
->>>>>>> c9a65620608810cb0830dc46b2d9126c16592d20
 }
+
+  
 .theme-toggle-btn {
   font-size: 1rem; /* Match the font size of navbar links */
   font-weight: normal; /* Make sure the weight is consistent */
