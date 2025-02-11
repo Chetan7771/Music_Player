@@ -207,34 +207,9 @@ h1{
   margin: 0 15px;
 }
 
-.settings-icon {
-  background: white;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 5px;
-  border-radius: 5px;
-}
-.settings-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-.settings-icon {
-  margin-right: 10px; /* Adjust as needed */
-}
 .top-bar {
   overflow: visible; /* Prevent clipping */
 }
 .top-bar {
   overflow: visible; /* Prevent clipping */
-}
-.settings-icon {
-  position: relative;
-  z-index: 10;
 }
