@@ -6,6 +6,7 @@ import Settings from "./Settings";
 function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Apply theme changes
   useEffect(() => {
@@ -26,12 +27,23 @@ function Navbar() {
   return (
     <nav className="navbar">
       <h1 className="brand-name">GrooveBox</h1>
+
       <ul className="navbar-links">
         <li>Home</li>
         <li>Explore</li>
         <li>Playlists</li>
         <li>Profile</li>
       </ul>
+
+      {/* Search Bar placed between Profile and Settings Icon */}
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+
       <button onClick={toggleSettings} className="settings-icon">
         ⚙️
       </button>
