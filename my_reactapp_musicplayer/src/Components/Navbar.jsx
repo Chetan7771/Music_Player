@@ -1,36 +1,50 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
+import Settings from "./Settings";
 
 function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  // Update body class whenever the theme changes
+  // Apply theme changes
   useEffect(() => {
     document.body.className = isDarkMode ? "dark" : "light";
   }, [isDarkMode]);
 
-  // Toggle theme handler
+  // Toggle dark/light theme
   const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    setIsDarkMode((prev) => !prev);
+    setIsSettingsOpen(false); // Close settings after toggling theme
+  };
+
+  // Toggle settings panel
+  const toggleSettings = () => {
+    setIsSettingsOpen((prev) => !prev);
   };
 
   return (
-    <div>
-      <nav className="navbar">
-        <h1 className="brand-name">GrooveBox</h1>
-        <ul className="navbar-links">
-          <li>Home</li>
-          <li>Explore</li>
-          <li>Playlists</li>
-          <li>Profile</li>
-        </ul>
-        <button onClick={toggleTheme} className="theme-toggle-btn">
-          {isDarkMode ? "Light" : "Dark"}
-        </button>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <h1 className="brand-name">GrooveBox</h1>
+      <ul className="navbar-links">
+        <li>Home</li>
+        <li>Explore</li>
+        <li>Playlists</li>
+        <li>Profile</li>
+      </ul>
+      <button onClick={toggleSettings} className="settings-icon">
+        ⚙️
+      </button>
+
+      {/* Settings Panel */}
+      <Settings
+        isOpen={isSettingsOpen}
+        toggleSettings={toggleSettings}
+        toggleTheme={toggleTheme}
+        isDarkMode={isDarkMode}
+      />
+    </nav>
   );
 }
 
 export default Navbar;
-

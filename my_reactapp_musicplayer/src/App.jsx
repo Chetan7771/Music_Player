@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Login from "./Components/Login";
 import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
+import Settings from "./Components/Settings";
 
 
 // Placeholder Components
@@ -21,6 +22,7 @@ const App = () => {
           ) : (
             <>
               <Route path="/" element={<Home />} />
+              <Route path="/settings" element={<Settings />} /> {/* Add Settings Page */}
               <Route path="*" element={<Navigate to="/" />} />
             </>
           )}

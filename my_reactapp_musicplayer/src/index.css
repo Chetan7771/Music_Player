@@ -1,4 +1,11 @@
 /* Global Light and Dark Themes */
+body {
+  background-color: #121212;  /* Same as navbar */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
 body.light {
   background-color: #f9f9f9;
   color: #000;
@@ -105,3 +112,129 @@ h1{
   transform: scale(1.2); /* Increases size by 20% */
 }
 
+.settings-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.settings-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.settings-btn:hover {
+  transform: scale(1.2);
+}
+
+.theme-toggle-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #1db954;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #17a748;
+}
+.settings-panel {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #1e1e1e;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  z-index: 100;
+}
+
+.settings-panel h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.theme-toggle {
+  width: 100%;
+  padding: 8px;
+  background: #32cd32;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.theme-toggle:hover {
+  background: #28a428;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--bg-color, #222); /* Ensure dynamic theme support */
+  color: var(--text-color, white);
+  position: fixed; /* Keep navbar at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.search-bar {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px; /* Set a fixed width */
+  margin: 0 15px;
+}
+
+.settings-icon {
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.settings-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.settings-icon {
+  margin-right: 10px; /* Adjust as needed */
+}
+.top-bar {
+  overflow: visible; /* Prevent clipping */
+}
+.top-bar {
+  overflow: visible; /* Prevent clipping */
+}
+.settings-icon {
+  position: relative;
+  z-index: 10;
+}
