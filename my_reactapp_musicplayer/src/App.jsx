@@ -4,10 +4,15 @@ import Login from "./Components/Login";
 import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
 import Settings from "./Components/Settings";
+import MusicPlayer from "./Components/MusicPlayer";
 
-
-// Placeholder Components
-const Home = () => <h2>Coming soon</h2>;
+// Home Component with MusicPlayer
+const Home = () => (
+  <div>
+    <h2>Will be Updated soon</h2>
+    <MusicPlayer /> {/* Using MusicPlayer instead of AudioPlayer */}
+  </div>
+);
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,7 +27,7 @@ const App = () => {
           ) : (
             <>
               <Route path="/" element={<Home />} />
-              <Route path="/settings" element={<Settings />} /> {/* Add Settings Page */}
+              <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<Navigate to="/" />} />
             </>
           )}
