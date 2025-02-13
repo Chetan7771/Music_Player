@@ -9,7 +9,7 @@ import MusicPlayer from "./Components/MusicPlayer";
 // Home Component with MusicPlayer
 const Home = () => (
   <div>
-    <h2>Will be Updated soon</h2>
+    <h2></h2>
     <MusicPlayer /> {/* Using MusicPlayer instead of AudioPlayer */}
   </div>
 );

@@ -6,7 +6,7 @@ const songs = [
   { name: "Peelings", file: "/Peelings.mp3" },
   { name: "Hilesso Hilessa", file: "/Hilesso Hilessa.mp3" },
   { name: "The Rage of Daaku", file: "/The Rage of Daaku.mp3" },
-  { name: "Jaadu Do Patti 320 Kbps", file: "/Jaadu Do Patti.mp3" },
+  { name: "Jaadu Do Patti 320 Kbps", file: "/Jaadu Do Patti 320 Kbps.mp3" },
   { name: "Tere Naina", file: "/Tere Naina.mp3" },
   { name: "Paisa Ho Toh", file: "/Paisa Ho Toh.mp3" }
 ];
